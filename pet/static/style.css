@@ -1,0 +1,885 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Set position to relative for absolute positioning */
+    align-items: center;
+    justify-content: center;
+}
+
+.lava-background {
+    position: fixed; /* Изменено на fixed */
+    top: 0;
+    left: 0;
+    width: 100%; /* Изменено на 100% */
+    height: 100%; /* Изменено на 100vh */
+    z-index: -1;
+    background: linear-gradient(to bottom, #d558eb, #0077ff, #0077ff, #0077ff, #af69f0, #0077ff, #0077ff, #0077ff, #d558eb);
+    background-size: 100% 200%;
+    animation: lavaFlow 10s infinite linear;
+}
+
+
+@keyframes lavaFlow {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+
+
+
+.hero {
+    background-color: transparent; /* Set background to transparent */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    animation: fadeInUp 1s ease-in-out; /* Made animation faster */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.hero h1 {
+    font-size: 48px;
+    animation: slideInLeft 1s ease-in-out; /* Made animation faster */
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.hero button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    animation: bounceIn 1s ease-in-out; /* Made animation faster */
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) translateY(0);
+    }
+}
+
+.courses {
+    background-color: rgba(255, 255, 255, 0.8); /* Set background to semi-transparent white */
+    padding: 2em;
+    animation: fadeIn 1s ease-in-out; /* Made animation faster */
+    max-height: 50vh;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s ease-in-out; /* Made animation faster */
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) translateY(0);
+    }
+}
+
+.course-card img {
+    width: 110px;
+    height: 110px;
+}
+.course-card1 img {
+    width: 280px;
+    height: 100px;
+}
+
+.course-card h3 {
+    font-size: 18px;
+}
+
+.course-card p {
+    animation: fadeIn 1s ease-in-out; /* Made animation faster */
+}
+
+.card1 {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card1 svg {
+    width: 78px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  .card1__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card1:hover .card1__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card1__title {
+    margin: 0;
+    font-size: 50px;
+    color: #333;
+    font-weight: 900;
+  }
+  
+  .card1:hover svg {
+    scale: 0;
+  }
+  
+  .card1__description {
+    margin: 10px 0 0;
+    font-size: 34px;
+    color: #777;
+    line-height: 1.4;
+  }
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+    animation: fadeInUp 1s ease-in-out; /* Made animation faster */
+}
+
+.cssbuttons-io-button {
+    background: #2c2c2c;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 3.8em;
+    width: 10em;
+    padding-right: 3.3em;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 35%;
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Использует цвет родительского элемента */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px; /* Размер шрифта */
+    padding: 10px 20px; /* Отступы внутри ссылки */
+    color: white; /* Цвет текста */
+    border: none; /* Убирает границу */
+    border-radius: 30px; /* Скругляет углы */
+    cursor: pointer; /* Меняет курсор на указатель при наведении */
+    transition: background-color 0.3s ease; /* Анимация смены цвета фона */
+    height: 70px;
+}
+
+.cssbuttons-io-button:hover {
+    background-color: #000000; /* Изменяет цвет фона при наведении */
+}
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 2.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+
+.pyramid-loader {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(-20deg); /* Center the loader */
+    width: 500px; /* Slightly larger width */
+    height: 10px; /* Slightly larger height */
+    display: block;
+    transform-style: preserve-3d;
+
+}
+
+
+
+.hero {
+    background-color: transparent; /* Set background to transparent */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    animation: fadeInUp 1s ease-in-out; /* Made animation faster */
+    position: relative; /* Add position relative */
+    z-index: 1; /* Ensure text is above the loader */
+}
+
+  
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin 4s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .pyramid-loader .wrapper .side {
+    width: 70px;
+    height: 70px;
+  /* you can choose any gradient or color you want */
+    /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center top;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .pyramid-loader .wrapper .side1 {
+    transform: rotateZ(-30deg) rotateY(90deg);
+    background: conic-gradient( #2BDEAC, #F028FD, #D8CCE6, #2F2585);
+  }
+  
+  .pyramid-loader .wrapper .side2 {
+    transform: rotateZ(30deg) rotateY(90deg);
+    background: conic-gradient( #2F2585, #D8CCE6, #F028FD, #2BDEAC);
+  }
+  
+  .pyramid-loader .wrapper .side3 {
+    transform: rotateX(30deg);
+    background: conic-gradient( #2F2585, #D8CCE6, #F028FD, #2BDEAC);
+  }
+  
+  .pyramid-loader .wrapper .side4 {
+    transform: rotateX(-30deg);
+    background: conic-gradient( #2BDEAC, #F028FD, #D8CCE6, #2F2585);
+  }
+  
+  .pyramid-loader .wrapper .shadow {
+    width: 60px;
+    height: 60px;
+    background: #8B5AD5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(90deg) translateZ(-40px);
+    filter: blur(12px);
+  }
+
+
+  header {
+    background-image: linear-gradient(43deg, #e9ebf0 0%, #75c4f9 46%, #5ecefe 100%);
+    color: #fff;
+    padding: 20px 50px; /* Увеличенные отступы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInDown 1s ease-in-out;
+    height: 27px; /* Увеличенная высота */
+    margin-bottom: 20px; /* Увеличенный отступ снизу */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 30px; /* Увеличенный отступ справа */
+    animation: fadeInRight 1s ease-in-out;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+  
+  nav a:hover {
+    color: #ccc;
+  }
+
+  .card-content .card-title,
+  .card-content .card-para {
+      text-align: center; /* Выравнивание текста по центру */
+  }
+
+  .card {
+    margin: 5%;
+    width: 1200px;
+    height: 400px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+    text-align: center;
+  }
+
+
+  
+  .card-content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .card-content .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+    text-transform: uppercase;
+  }
+
+  .card-content .card-para {
+    color: inherit;
+    opacity: 0.8;
+    font-size: 24px;
+  }
+  
+  .card:hover {
+    transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+  }
+  
+  .card:hover:before {
+    transform: translateX(-100%);
+  }
+  
+  .card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+  }
+  
+  .card:hover:after {
+    transform: translateX(100%);
+  }
+  
+  
+  
+  
+  
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+
+
+
+
+
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  /* When you change the amount of characters in the h1, you have to change 
+  the with: 14ch and  steps(14, end), if there is 14 characters, put 14, 
+  if there is 20 put 20 */
+  .animation-container {
+    position: relative;
+}
+
+.animation {
+    align-items: right;
+    color: white;
+    font: bold 200% Consolas, Monaco, monospace;
+    border-right: .1em solid rgb(245, 241, 241);
+    width: 13.20ch;
+    margin: 2em 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-animation: typing 5s steps(13, end),
+                 blink-caret .5s step-end infinite alternate;
+}
+
+
+
+/*  */
+
+
+
+
+
+.tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    border-radius: 10px;
+    display: inline-block; /* Добавлено */
+    width: fit-content; /* Добавлено */
+    top: 33%;
+    left: 18%;
+    transform: translateX(-50%);
+}
+
+  
+  .tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .profile {
+    background: #2a2b2f;
+    border-radius: 10px 15px;
+    padding: 10px;
+    border: 1px solid rgba(11, 63, 95, 1);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    top: -150px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .icon {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+  .layer {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.3s;
+  }
+  .icon:hover .layer {
+    transform: rotate(-35deg) skew(20deg);
+  }
+  .layer span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .layer span,
+  .text {
+    color: #1da1f2;
+    border-color: #1da1f2;
+  }
+  
+  .icon:hover.layer span {
+    box-shadow: -1px 1px 3px #1da1f2;
+  }
+  .icon .text {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    opacity: 0;
+    font-weight: 500;
+    transform: translateX(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+  }
+  .icon:hover .text {
+    bottom: -35px;
+    opacity: 1;
+  }
+  
+  .icon:hover .layer span:nth-child(1) {
+    opacity: 0.2;
+  }
+  .icon:hover .layer span:nth-child(2) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+  }
+  .icon:hover .layer span:nth-child(3) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+  }
+  .icon:hover .layer span:nth-child(4) {
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+  }
+  .icon:hover .layer span:nth-child(5) {
+    opacity: 1;
+    transform: translate(20px, -20px);
+  }
+  
+  .layer span.fab {
+    font-size: 30px;
+    line-height: 64px;
+    text-align: center;
+    fill: #1da1f2;
+    background: #ffffff;
+  }
+  .user {
+    display: flex;
+    gap: 10px;
+  }
+  .img {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #1da1f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  .name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1da1f2;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+  .about {
+    color: #ccc;
+    padding-top: 5px;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .unique-card {
+    margin: 100px auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    position: relative;
+    width: 1000px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .unique-wave {
+    position: absolute;
+    width: 1050px;
+    height: 700px;
+    opacity: 1;
+    left: 0;
+    top: 0;
+
+    background: linear-gradient(744deg,#af40ff,#5b42f3 60%,#00ddeb);
+  }
+  
+  .unique-icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+  }
+  
+  .unique-infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  .unique-name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    text-transform: lowercase;
+  }
+  
+  .unique-wave:nth-child(2),
+  .unique-wave:nth-child(3) {
+    top: 210px;
+  }
+  
+  .active .unique-wave {
+    border-radius: 40%;
+    animation: unique-wave 3000ms infinite linear;
+  }
+  
+  .unique-wave {
+    border-radius: 40%;
+    animation: unique-wave 55s infinite linear;
+  }
+  
+  .active .unique-wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+  
+  .unique-wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+  
+  .active .unique-wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+  
+  .unique-wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+  
+  @keyframes unique-wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+.buy {
+    font-size: 50px;
+    text-decoration: dashed;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+
+
+.courses1 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 20%;
+  font-size: 60px;
+  color: white;
+}
+
+
+.courses2 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 2%;
+  font-size: 20px;
+  color: white;
+}
+
+
+.buying_card_info{
+  font-size: 30px;
+}

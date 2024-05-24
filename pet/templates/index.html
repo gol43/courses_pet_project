@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+      
+    <div class="pyramid-loader">
+        <div class="wrapper">
+          <span class="side side1"></span>
+          <span class="side side2"></span>
+          <span class="side side3"></span>
+          <span class="side side4"></span>
+          <span class="shadow"></span>
+        </div>
+      </div>
+
+
+      
+    <section class="hero">
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                  <p class="card-title">Python-developer</p>
+                  <p class="card-para">Начни свой путь в мир программирования с нами</p>
+                </div>
+              </div>
+
+                <a href="{% url 'buying' %}" class="cssbuttons-io-button">Поехали...
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </a>
+
+                </div>
+              </button>              
+        </div>
+
+
+        
+        <div class="tooltip-container">
+          <div class="tooltip">
+              <div class="profile">
+                  <div class="user">
+                      <div class="img">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmdLDp6eEqTJ5KYy0uGvHkepRsyDMRJMYxj918hBr-Q&s" width="60" height="60">
+                      </div>
+                      <div class="details">
+                          <div class="name">User</div>
+                          <div class="username">@spongedmw</div>
+                      </div>
+                  </div>
+                  <div class="about">500+ Connections</div>
+              </div>
+          </div>
+          <div class="text">
+              <a class="icon" href="https://t.me/spongedmw">
+                  <div class="layer">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span class="fab fa-telegram">
+                          <img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" width="55" height="55" viewBox="0 0 24 24" fill="#1da1f2">
+                          </img>
+                      </span>
+                  </div>
+                  <div class="text">Telegram</div>
+              </a>
+          </div>
+      </div>
+      
+    </section>
+</body>
+{% endblock %}

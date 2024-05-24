@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title %}Buying{% endblock %}
+{% block content %}
+
+    
+
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+              1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 20 -10" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <a class='buy' href="https://t.me/spongedmw">Вы можете купить курсы тут</a>
+      <div class="unique-card active">
+        <div class="unique-image"></div>
+        
+        <div class="unique-wave"></div>
+        <div class="unique-wave"></div>
+        <div class="unique-wave"></div>
+        
+
+        <div class="unique-infotop">
+            <a href="https://t.me/spongedmw"><img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" width="55" height="55" viewBox="0 0 24 24" fill="#1da1f2">
+        </img></a><br>      
+          Telegram
+          <br>
+          <div class="unique-name">@spongedmw</div>
+        </div>
+      </div>
+      
+      
+
+    <section class="courses">
+        <div class="container">
+            <h2>Наше дерьмо</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="card1">
+                      <div class='buying_card_info'>0$</div>
+                        <div class="card1__content">
+                          <p class="card1__title">Free trial</p>
+                          <p class="card1__description">Вы получите только вводную часть</p>
+                        </div>
+                      </div>                      
+                </div>
+                <div class="course-card">
+                    <div class="card1">
+                      <div class='buying_card_info'>5000$</div>
+                        <div class="card1__content">
+                          <p class="card1__title">Medium</p>
+                          <p class="card1__description">Вы получите только половину всего курса</p>
+                        </div>
+                      </div>                      
+                </div>
+                <div class="course-card">
+                    <div class="card1">
+                      <div class='buying_card_info'>10 000$</div>
+                        <div class="card1__content">
+                          <p class="card1__title">Hard</p>
+                          <p class="card1__description">Вы получите полный вариант курса</p>
+                        </div>
+                      </div>                      
+                </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Programming Courses</p>
+    </footer>
+
+{% endblock %}
+

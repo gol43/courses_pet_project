@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}  
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Login{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<div class="m">
+    <div class="login wrap">
+        <div class="h1">Login</div>
+        <form id="loginForm">
+            {% csrf_token %}
+            <input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="Email" id="email" name="email" type="text">
+            <input placeholder="Password" id="password" name="password" type="password">
+            <input value="Login" class="btn" type="button" id="loginButton">
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('loginButton').addEventListener('click', async () => {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        const response = await fetch('/login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': csrfToken
+            },
+            body: new URLSearchParams({
+                email: email,
+                password: password
+            })
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            window.location.href = '/courses/';
+        } else {
+            alert(result.error || 'Login failed');
+        }
+    });
+</script>
+{% endblock %}

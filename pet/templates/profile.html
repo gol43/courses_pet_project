@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Profile{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<div class="profile-container">
+    <h1>Profile</h1>
+    <div class="profile-details">
+        <p><strong >Email:</strong> {{ user.email }}</p>
+        <p><strong >Date Joined:</strong> {{ user.created_at }}</p>
+        <p><strong >Is Active:</strong> {{ user.is_active }}</p>
+        <p><strong >Is Staff:</strong> {{ user.is_staff }}</p>
+        <p><strong >Is Superuser:</strong> {{ user.is_superuser }}</p>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+.profile-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+</style>

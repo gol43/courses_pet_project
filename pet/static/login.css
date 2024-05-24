@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Set position to relative for absolute positioning */
+    align-items: center;
+    justify-content: center;
+}
+
+.lava-background {
+    position: fixed; /* Изменено на fixed */
+    top: 0;
+    left: 0;
+    width: 100%; /* Изменено на 100% */
+    height: 100vh; /* Изменено на 100vh */
+    z-index: -1;
+    background: linear-gradient(to bottom, #d558eb, #0077ff, #0077ff, #0077ff, #af69f0, #0077ff, #0077ff, #0077ff, #d558eb);
+    background-size: 100% 200%;
+    animation: lavaFlow 10s infinite linear;
+}
+
+
+@keyframes lavaFlow {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+
+
+
+
+header {
+    background-image: linear-gradient(43deg, #e9ebf0 0%, #75c4f9 46%, #5ecefe 100%);
+    color: #fff;
+    padding: 20px 50px; /* Увеличенные отступы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInDown 1s ease-in-out;
+    height: 27px; /* Увеличенная высота */
+    margin-bottom: 20px; /* Увеличенный отступ снизу */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 30px; /* Увеличенный отступ справа */
+    animation: fadeInRight 1s ease-in-out;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+  
+  nav a:hover {
+    color: #ccc;
+  }
+
+
+
+
+.m {
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.login {
+    width: 440px;
+    height: 400px;
+    background: #2c2c2c;
+    padding: 57px;
+    padding-bottom: 57px;
+    color: #fff;
+    border-radius: 17px;
+    padding-bottom: 50px;
+    font-size: 1.3em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"] {
+    opacity: 1;
+    display: block;
+    border: none;
+    outline: none;
+    width: 92%;
+    padding: 13px 18px;
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    background: #3c3c3c;
+    color: #fff;
+  }
+  
+  .login input:focus {
+    animation: bounce 1s;
+    -webkit-appearance: none;
+  }
+  
+  .login input[type=submit],
+  .login input[type=button],
+  .h1 {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 13px;
+    margin: 40px 0 0 0;
+    border-radius: 500px;
+    font-weight: 600;
+    animation: bounce2 1.6s;
+  }
+  
+  .h1 {
+    padding: 0;
+    position: relative;
+    top: -35px;
+    left: 43%;
+    margin-bottom: -0px;
+    font-size: 1.3em;
+  }
+  
+  .btn {
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    color: #fff;
+    padding: 16px !important;
+    width: 100px;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );
+    color: rgb(255, 255, 255);
+    padding: 16px !important;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .login input[type=text] {
+    animation: bounce 1s;
+    -webkit-appearance: none;
+  }
+  
+  .login input[type=password] {
+    animation: bounce1 1.3s;
+  }
+  
+  .ui {
+    font-weight: bolder;
+    background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+    border-image-slice: 1;
+    display: inline;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .login {
+      width: 70%;
+      padding: 3em;
+    }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(-250px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce1 {
+    0% {
+      opacity: 0;
+    }
+  
+    40% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounce2 {
+    0% {
+      opacity: 0;
+    }
+  
+    70% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+
+
+
+
+  .profile-container {
+    color: white;
+    font-size: larger;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c2c;
+    max-width: 20%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #444;
+}
+
+.profile-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.profile-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.profile-details strong {
+    color: #40ffe2;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-container {
+        max-width: 80%;
+        padding: 15px;
+    }
+}
